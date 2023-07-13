@@ -39,7 +39,7 @@ export const ContextProvider = ({ children }: IContextProvider) => {
     localStorage.setItem("colorMode", color);
   };
 
-  const handleClick = (clicked: any) =>
+  const handleClick = (clicked: string) =>
     setIsClicked({ ...initialState, [clicked]: true });
 
   return (
