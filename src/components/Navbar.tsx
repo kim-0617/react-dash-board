@@ -31,11 +31,11 @@ const NavButton = ({
         type="button"
         onClick={customFunc}
         style={{ color }}
-        className="relative text-xl rounded-full hover:bg-light-gray"
+        className="relative text-xl rounded-full p-3 hover:bg-light-gray"
       >
         <span
           style={{ backgroundColor: dotColor }}
-          className="absolute inline-flex rounded-full b-2 w-2 right-2 top-2"
+          className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
         />
         {icon}
       </button>
@@ -108,7 +108,7 @@ const Navbar = () => {
           }}
           color="blue"
           icon={<RiNotification3Line />}
-          dotColor="#03C9D7"
+          dotColor="rgb(254, 201, 15)"
         />
 
         <TooltipComponent content="Profile" position="BottomCenter">
@@ -116,7 +116,11 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img src={avatar} alt="avatar" className="rounded-full w-8 h-8" />
+            <img
+              src={avatar}
+              alt="user-profile"
+              className="rounded-full w-8 h-8"
+            />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
               <span className=" text-gray-400 text-14 font-bold ml-1">
