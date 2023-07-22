@@ -20,6 +20,7 @@ const Employees = () => {
         id="gridcomp"
         dataSource={employeesData}
         allowPaging
+        allowSorting
         toolbar={["Search"]}
         width="auto"
       >
