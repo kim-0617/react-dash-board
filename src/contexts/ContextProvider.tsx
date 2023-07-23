@@ -55,6 +55,9 @@ export const ContextProvider = ({ children }: IContextProvider) => {
   const handleClick = (clicked: string) =>
     setIsClicked({ ...initialState, [clicked]: true });
 
+  const closeNavbar = (clicked: string) =>
+    setIsClicked({ ...initialState, [clicked]: false });
+
   return (
     <StateContext.Provider
       value={{
@@ -72,6 +75,7 @@ export const ContextProvider = ({ children }: IContextProvider) => {
         setColor,
         themeSettings,
         setThemeSettings,
+        closeNavbar,
       }}
     >
       {children}

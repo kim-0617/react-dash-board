@@ -1,36 +1,39 @@
-import React from "react";
 import {
-  AiOutlineCalendar,
-  AiOutlineShoppingCart,
+  AxisModel,
+  RangeColorSettingModel,
+} from "@syncfusion/ej2-react-charts";
+import {
   AiOutlineAreaChart,
   AiOutlineBarChart,
+  AiOutlineCalendar,
+  AiOutlineShoppingCart,
   AiOutlineStock,
 } from "react-icons/ai";
+import { BiColorFill } from "react-icons/bi";
 import {
-  FiShoppingBag,
-  FiEdit,
-  FiPieChart,
-  FiBarChart,
-  FiCreditCard,
-  FiStar,
-  FiShoppingCart,
-} from "react-icons/fi";
-import {
-  BsKanban,
   BsBarChart,
   BsBoxSeam,
-  BsCurrencyDollar,
-  BsShield,
   BsChatLeft,
+  BsCurrencyDollar,
+  BsKanban,
+  BsShield,
 } from "react-icons/bs";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdContacts } from "react-icons/io";
-import { RiContactsLine, RiStockLine } from "react-icons/ri";
-import { MdOutlineSupervisorAccount } from "react-icons/md";
-import { HiOutlineRefresh } from "react-icons/hi";
-import { TiTick } from "react-icons/ti";
+import {
+  FiBarChart,
+  FiCreditCard,
+  FiEdit,
+  FiPieChart,
+  FiShoppingBag,
+  FiShoppingCart,
+  FiStar,
+} from "react-icons/fi";
 import { GiLouvrePyramid } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
+import { HiOutlineRefresh } from "react-icons/hi";
+import { IoMdContacts } from "react-icons/io";
+import { MdOutlineSupervisorAccount } from "react-icons/md";
+import { RiContactsLine, RiStockLine } from "react-icons/ri";
+import { TiTick } from "react-icons/ti";
 import avatar from "./avatar.jpg";
 import avatar2 from "./avatar2.jpg";
 import avatar3 from "./avatar3.png";
@@ -42,8 +45,6 @@ import product4 from "./product4.jpg";
 import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
-import product8 from "./product8.jpg";
-import { AxisModel } from "@syncfusion/ej2-react-charts";
 
 export const gridOrderImage = (props: any) => (
   <div>
@@ -185,12 +186,12 @@ export const areaPrimaryYAxis: AxisModel = {
   minorTickLines: { width: 0 },
   labelStyle: { color: "gray" },
 };
-export const barPrimaryXAxis = {
+export const barPrimaryXAxis: AxisModel = {
   valueType: "Category",
   interval: 1,
   majorGridLines: { width: 0 },
 };
-export const barPrimaryYAxis = {
+export const barPrimaryYAxis: AxisModel = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
@@ -327,7 +328,7 @@ export const barCustomSeries = [
     },
   },
 ];
-export const colorMappingData = [
+export const colorMappingData: any = [
   [
     { x: "Jan", y: 6.96 },
     { x: "Feb", y: 8.9 },
@@ -347,31 +348,31 @@ export const colorMappingData = [
   ["#FF4040"],
 ];
 
-export const rangeColorMapping = [
-  { label: "1°C to 10°C", start: "1", end: "10", colors: colorMappingData[1] },
+export const rangeColorMapping: RangeColorSettingModel[] = [
+  { label: "1°C to 10°C", start: 1, end: 10, colors: colorMappingData[1] },
 
   {
     label: "11°C to 20°C",
-    start: "11",
-    end: "20",
+    start: 11,
+    end: 20,
     colors: colorMappingData[2],
   },
 
   {
     label: "21°C to 30°C",
-    start: "21",
-    end: "30",
+    start: 21,
+    end: 30,
     colors: colorMappingData[3],
   },
 ];
 
-export const ColorMappingPrimaryXAxis = {
+export const ColorMappingPrimaryXAxis: AxisModel = {
   valueType: "Category",
   majorGridLines: { width: 0 },
   title: "Months",
 };
 
-export const ColorMappingPrimaryYAxis = {
+export const ColorMappingPrimaryYAxis: AxisModel = {
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
@@ -379,7 +380,7 @@ export const ColorMappingPrimaryYAxis = {
   title: "Temperature",
 };
 
-export const FinancialPrimaryXAxis = {
+export const FinancialPrimaryXAxis: AxisModel = {
   valueType: "DateTime",
   minimum: new Date("2016, 12, 31"),
   maximum: new Date("2017, 9, 30"),
@@ -387,7 +388,7 @@ export const FinancialPrimaryXAxis = {
   majorGridLines: { width: 0 },
 };
 
-export const FinancialPrimaryYAxis = {
+export const FinancialPrimaryYAxis: AxisModel = {
   title: "Price",
   minimum: 100,
   maximum: 180,
@@ -627,24 +628,28 @@ export const chatData = [
     message: "Roman Joined the Team!",
     desc: "Congratulate him",
     time: "9:08 AM",
+    dotColor: "#4d8a6d",
   },
   {
     image: avatar3,
     message: "New message received",
     desc: "Salma sent you new message",
     time: "11:56 AM",
+    dotColor: "#4d8a6d",
   },
   {
     image: avatar4,
     message: "New Payment received",
     desc: "Check your earnings",
     time: "4:39 AM",
+    dotColor: "#4d8a6d",
   },
   {
     image: avatar,
     message: "Jolly completed tasks",
     desc: "Assign her new tasks",
     time: "1:12 AM",
+    dotColor: "#4d8a6d",
   },
 ];
 
