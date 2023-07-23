@@ -1,9 +1,8 @@
-import React from "react";
-import { MdOutlineCancel } from "react-icons/md";
-import { BsCheck } from "react-icons/bs";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { themeColors } from "../data/dummy";
+import { BsCheck } from "react-icons/bs";
+import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
+import { themeColors } from "../data/dummy";
 
 const ThemeSettings = () => {
   const { currentColor, currentMode, setColor, setMode, setThemeSettings } =

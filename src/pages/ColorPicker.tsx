@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { ColorPickerComponent } from "@syncfusion/ej2-react-inputs";
+import { useState } from "react";
 import { Header } from "../components";
 
 const ColorPicker = () => {

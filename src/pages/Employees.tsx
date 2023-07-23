@@ -1,15 +1,14 @@
-import React from "react";
+import { ColumnDirective } from "@syncfusion/ej2-react-charts";
 import {
-  GridComponent,
   ColumnsDirective,
+  GridComponent,
+  Inject,
   Page,
   Search,
-  Inject,
   Toolbar,
 } from "@syncfusion/ej2-react-grids";
-import { employeesData, employeesGrid } from "../data/dummy";
 import { Header } from "../components";
-import { ColumnDirective } from "@syncfusion/ej2-react-charts";
+import { employeesData, employeesGrid } from "../data/dummy";
 
 const Employees = () => {
   return (

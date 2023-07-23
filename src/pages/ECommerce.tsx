@@ -1,14 +1,7 @@
-import React from "react";
-import { BsCurrencyDollar } from "react-icons/bs";
 import { GoDotFill } from "react-icons/go";
-import { Stacked, Pie, Button, SparkLine } from "../components";
-import {
-  earningData,
-  SparklineAreaData,
-  ecomPieChartData,
-} from "../data/dummy";
+import { Button, SparkLine, Stacked } from "../components";
 import { useStateContext } from "../contexts/ContextProvider";
-import { IEarningData } from "../interfaces/interface";
+import { SparklineAreaData, earningData } from "../data/dummy";
 
 const ECommerce = () => {
   const { currentColor } = useStateContext();

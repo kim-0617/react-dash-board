@@ -1,20 +1,19 @@
-import React from "react";
 import {
   ChartComponent,
+  DateTime,
+  Inject,
+  Legend,
   SeriesCollectionDirective,
   SeriesDirective,
-  Inject,
-  DateTime,
-  Legend,
   SplineAreaSeries,
 } from "@syncfusion/ej2-react-charts";
+import { Header } from "../../components";
+import { useStateContext } from "../../contexts/ContextProvider";
 import {
   areaCustomSeries,
   areaPrimaryXAxis,
   areaPrimaryYAxis,
 } from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
-import { Header } from "../../components";
 
 const Area = () => {
   const { currentMode } = useStateContext();
