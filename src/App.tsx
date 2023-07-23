@@ -1,36 +1,39 @@
-import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import { FiSettings } from "react-icons/fi";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Navbar, Sidebar, ThemeSettings } from "./components";
+import { useStateContext } from "./contexts/ContextProvider";
 import {
-  ECommerce,
-  Orders,
-  Calendar,
-  Employees,
-  Stacked,
-  Pyramid,
-  Customers,
-  Kanban,
   Area,
   Bar,
-  Pie,
-  Financial,
-  ColorPicker,
+  Calendar,
   ColorMapping,
+  ColorPicker,
+  Customers,
+  ECommerce,
   Editor,
+  Employees,
+  Financial,
+  Kanban,
   Line,
+  Orders,
+  Pie,
+  Pyramid,
+  Stacked,
 } from "./pages";
-import "./App.css";
-import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
-
-  useEffect(() => {}, []);
+  const {
+    activeMenu,
+    currentColor,
+    currentMode,
+    themeSettings,
+    setThemeSettings,
+  } = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: 1000 }}>
@@ -39,7 +42,7 @@ const App = () => {
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{
-                  background: "blue",
+                  background: currentColor,
                   borderRadius: "50%",
                 }}
                 onClick={() => setThemeSettings(true)}
@@ -60,7 +63,7 @@ const App = () => {
           )}
 
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
