@@ -25,7 +25,7 @@ import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
 
   useEffect(() => {}, []);
 
@@ -42,6 +42,7 @@ const App = () => {
                   background: "blue",
                   borderRadius: "50%",
                 }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -68,6 +69,8 @@ const App = () => {
             </div>
 
             <div>
+              {themeSettings && <ThemeSettings />}
+
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<ECommerce />} />
